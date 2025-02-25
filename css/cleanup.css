@@ -1,1 +1,45 @@
-/* write your override styles here */
+/* Forcefully hiding graffiti by increasing specificity */
+
+/* Hides .tag-1 */
+#wall div.tag-1 {
+    display: none;
+}
+
+/* Hides #tag-2 */
+#wall div#tag-2 {
+    display: none;
+}
+
+/* Hides #tag-3 */
+#wall div#tag-3.slick {
+    background: url(../images/tag-3.png) no-repeat;
+    z-index: 5;
+     display: none;
+}
+
+/* Hides #tag-4 inside .parent */
+#wall .parent div#tag-4 {
+    display: none;
+}
+
+/* Hides #tag-5 inside .parent */
+#wall .parent div#tag-5.slick {
+    display: none;
+}
+
+/* Hides #tag-6 (deeply nested) */
+#wall .parent div div div#tag-6 {
+    display: none;
+}
+
+/* Hides #tag-7 */
+#wall .parent div div#tag-7.slick {
+    display: none;
+}
+#wall div {
+    display: none;
+    /* Hides all divs inside #wall */
+}
+div#wall #tag-3.slick {
+    all: unset;
+}
